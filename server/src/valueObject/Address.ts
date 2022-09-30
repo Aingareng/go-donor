@@ -1,17 +1,15 @@
 class Address {
   private _street: string
   private _district: string
-  private _province: string
   private _valAddress: object
 
-  constructor(street: string, district: string, province: string) {
+  constructor(street: string, district: string) {
     this._street = street
     this._district = district
-    this._province = province
     this._valAddress = {
       street: this._street,
       district: this._district,
-      province: this._province
+      province: "Sulawesi Tengah"
     }
   }
 
@@ -19,11 +17,10 @@ class Address {
     return this._valAddress
   }
 
-  public setAddress(street: string, district: string, province: string) {
+  public setAddress(street: string, district: string) {
     return this._valAddress = {
       street,
-      district,
-      province
+      district
     }
   }
 }

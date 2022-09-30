@@ -1,0 +1,54 @@
+POST http://localhost:8000/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName":"Fahri",
+  "lastName":"Ngareng",
+  "email":"ngareng@gmail.com",
+  "age":23,
+  "password":"helloworld",
+  "phone": "08123",
+  "address":{
+    "street":"Tavanjuka",
+    "district":"Sigi",
+    "province":"Sulteng"
+  },
+  "bloodType": "A"
+
+}
+
+###
+POST http://localhost:8000/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email":"ngarengai@gmail.com",
+  "password":"pepabri123"
+}
+###
+DELETE http://localhost:8000/user/logout HTTP/1.1
+
+###
+POST http://localhost:8080/user/update HTTP/1.1
+Content-Type: application/json  
+
+{
+  "phone":"1234567",
+  "address":{
+    "street":"Luwuk",
+    "district":"palu timur",
+    "province":"sulteng"
+  }
+}
+
+###
+GET http://localhost:8000/user HTTP/1.1
+
+
+
+###
+POST http://localhost:8000/user/donor HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5nYXJlbmdhaUBnbWFpbC5jb20iLCJpYXQiOjE2NjM2NzY0NzEsImV4cCI6MTY2MzkzNTY3MX0.-JOFSrmcRS61a297w9mQxziyWUeLx5vEsIS55YqTMFg
+
+###
+GET http://localhost:8000/user/token HTTP/1.1

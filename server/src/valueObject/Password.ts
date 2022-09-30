@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt'
 class Password {
   private _salt: string
   private _hash: string
-  constructor(salt: string, hash: string) {
+  constructor(salt: string = '', hash: string = '') {
     this._salt = salt
     if (this._salt === '') {
       this._salt = bcrypt.genSaltSync()
@@ -16,7 +16,7 @@ class Password {
   }
 
   public get hash(): string {
-    return this._hash
+    return this._hash = bcrypt.hashSync(this._hash, this._salt)
   }
 
   public set hash(password: string) {

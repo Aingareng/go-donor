@@ -1,24 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Address {
-    constructor(street, district, province) {
+    constructor(street, district) {
         this._street = street;
         this._district = district;
-        this._province = province;
         this._valAddress = {
             street: this._street,
             district: this._district,
-            province: this._province
+            province: "Sulawesi Tengah"
         };
     }
     get address() {
         return this._valAddress;
     }
-    setAddress(street, district, province) {
+    setAddress(street, district) {
         return this._valAddress = {
             street,
-            district,
-            province
+            district
         };
     }
 }

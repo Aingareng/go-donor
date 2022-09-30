@@ -10,6 +10,7 @@ class Donor {
   private _address: Address
   private _bloodType: string
 
+
   constructor(name: Name, email: Email, age: Age, password: Password, phone: Phone, address: Address, blood: string) {
     this._name = name
     this._email = email

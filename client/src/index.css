@@ -1,3 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .nav-default-style{
+    @apply 2xl:bg-[#8d103e] 2xl:box-border 2xl:p-[26px] 2xl:flex 2xl:items-center 2xl:justify-between 
+  }
+  .nav-menu-default-style{
+    @apply 2xl:text-xl  2xl:px-[30px] py-[6px] 2xl:rounded-lg 2xl:cursor-pointer 2xl:ease-in duration-300 hover:bg-[#B20080] hover:text-[#F7216E]
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
